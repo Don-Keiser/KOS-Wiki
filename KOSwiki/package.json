@@ -1,0 +1,22 @@
+{
+  "name": "koswiki",
+  "version": "1.0.0",
+  "description": "KOS Wiki Project",
+  "main": "main.js",
+  "icon": "images/logo.png",
+  "scripts": {
+    "start": "electron .",
+    "server": "node server.js",
+    "package": "electron-packager . KOS-Wiki --platform=win32 --arch=x64 --out=dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "electron": "^32.1.2",
+    "electron-packager": "^17.1.2"
+  }
+}
