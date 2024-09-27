@@ -18,7 +18,10 @@ body {
 h1 {
     color: #FFFFFF;
     font-size: 3rem;
-    margin-bottom: 2rem;
+}
+
+.center {
+    text-align: center;
 }
 
 #search-form {
@@ -112,45 +115,92 @@ button[type="submit"] {
 }
 
 .suggestion-item:hover {
-    background-color: #f0f0f0; /* Highlight on hover */
+    background-color: #e0e0e0; /* Highlight on hover */
 }
 
-/* Dark theme */
+/* Header Section */
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 2rem;
 }
 
-#theme-toggler {
+.wiki-title {
+    color: #FFFFFF;
+    font-size: 2.5rem;
+}
+
+/* Smaller Search Bar */
+.small-search-form {
+    display: flex;
+    align-items: center;
+}
+
+.small-search-form input[type="text"] {
+    font-size: 1rem;
+    padding: 0.5rem;
+    color: #FFFFFF;
+    background-color: #4B2AA3;
+    border: 2px solid #ccc;
+    border-radius: 0.25rem;
+    margin-right: 1rem;
+}
+
+.small-search-form button[type="submit"] {
+    font-size: 1rem;
+    padding: 0.5rem;
+    background-color: #4B2AA3;
+    color: #FFFFFF;
     border: none;
-    background: transparent;
+    border-radius: 0.25rem;
     cursor: pointer;
-    background: #e2e2e2;
-    padding: 10px 20px;
-    border-radius: 100px;
 }
 
-.dark-theme {
-    background-color: #282c34;
-    color: #fff;
+/* Welcome Section */
+.welcome-container {
+    background-color: #3a3a3a;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 0.25rem;
 }
 
-    .dark-theme #search-input {
-        background-color: #454545;
-        color: #fff;
-        border-color: #fff;
-    }
+.welcome-container h2 {
+    color: #FFFFFF;
+}
 
-        .dark-theme #search-input:focus {
-            border-color: #0074d9;
-        }
+/* Main Content Section */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+}
 
-    .dark-theme button[type="submit"] {
-        background-color: #0074d9;
-    }
+.flex-container {
+    display: flex; /* Enables flexbox layout */
+    justify-content: space-between; /* Ensures items are spaced out */
+    margin-top: 1rem; /* Optional: Add some space above */
+}
 
-    .dark-theme .result-link,
-    .dark-theme .result-link:hover {
-        color: #90caf9;
-    }
+.featured-article, .news-about-kos {
+    background-color: #4B2AA3;
+    color: #FFFFFF;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    width: 48%; /* Adjust width to fit the container */
+}
+
+.featured-article h3, .news-about-kos h3 {
+    margin-top: 0;
+}
+
+.logo-large {
+    max-width: 200px;
+    max-height: 200px;
+    vertical-align: middle;
+    margin-bottom: 2rem;
+}
+
+.logo-small {
+    max-width: 50px;
+    vertical-align: middle;
+}
