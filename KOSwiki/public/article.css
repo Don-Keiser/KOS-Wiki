@@ -1,0 +1,229 @@
+/* General body styling for article pages */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #333030;
+    margin: 0;
+    padding: 0;
+}
+
+/* Wrapper for the article page */
+.article-wrapper {
+    margin-left: 240px;
+    max-width: calc(100% - 260px);
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #333030;
+}
+
+/* Header container for the article title */
+.article-header {
+    background-color: #4B2AA3;
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    color: #FFFFFF;
+}
+
+/* Article title within the header */
+.article-header .article-title {
+    font-size: 2.5rem;
+    margin-left: 10px;
+    color: #FFFFFF;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+/* Container for the article */
+.article-container {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 100%;
+    margin: 0;
+    padding: 10px;
+    background-color: #333030;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Main content styling */
+.main-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+/* Article description styling */
+.article-description {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    margin-top: 2px;
+    color: #ddd;
+}
+
+/* Section title styling */
+.section-title {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    color: #ddd;
+}
+
+.subsection-title {
+    font-size: 1.25rem;
+    margin-top: 10px;
+    margin-bottom: 2px;
+    font-weight: bold;
+    color: #ddd;
+}
+
+.subsubsection-title {
+    font-size: 1rem;
+    margin-bottom: 2px;
+    font-weight: bold;
+    color: #ddd;
+}
+
+/* Section content styling */
+.section-content {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #ddd;
+}
+
+/* Infobox styling */
+.infobox {
+    color: #ddd;
+    width: 300px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #2A637A;
+    border: 1px solid #1A3840;
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+    margin-left: 20px;
+}
+
+.infobox-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.infobox-subtitle {
+    font-size: 1rem;
+    text-align: center;
+    font-weight: lighter;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.normal-text {
+    font-style: normal;
+}
+
+.infobox p {
+    font-size: 1rem;
+    margin: 8px 0;
+    text-align: center;
+}
+
+.infobox p strong {
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Table of Contents styling */
+.toc {
+    color: #ddd;
+    width: 200px;
+    padding: 10px;
+    border: none;
+    border-right: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+
+.toc h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.toc ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.toc ul ul {
+    margin-left: 15px; /* Indent subsections */
+}
+
+.toc ul li {
+    margin-bottom: 8px;
+}
+
+.toc ul li a {
+    color: #2A62A3;
+    text-decoration: none;
+}
+
+.toc ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Expand/collapse sections */
+details summary {
+    cursor: pointer;
+    list-style: none;
+    color: #ddd;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+details summary::before {
+    content: "+ ";
+    font-weight: bold;
+    color: #2A62A3;
+}
+
+details[open] summary::before {
+    content: "- ";
+    font-weight: bold;
+    color: #2A62A3;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1200px) {
+    .article-container {
+        flex-direction: column;
+    }
+
+    .infobox {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .main-content {
+        padding-right: 0;
+    }
+
+    .toc {
+        display: none;
+    }
+    
+    .article-wrapper {
+        margin-left: 0;
+        max-width: 100%;
+        padding-left: 0;
+    }
+}

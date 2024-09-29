@@ -27,7 +27,7 @@ async function loadPageCount() {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        articleCountElement.textContent = `${data.count} articles`;
+        articleCountElement.textContent = `There are currently ${data.count} articles on the KÖS-Wiki`;
     } catch (error) {
         console.error('Failed to load page count:', error);
         articleCountElement.textContent = 'Could not load article count'; // Handle error state

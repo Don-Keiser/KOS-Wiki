@@ -20,6 +20,15 @@ h1 {
     font-size: 3rem;
 }
 
+p {
+    color: #FFFFFF;
+}
+
+h2 {
+    color: #FFFFFF;
+    font-size: 2rem;
+}
+
 .center {
     text-align: center;
 }
@@ -30,11 +39,11 @@ h1 {
     justify-content: center;
     align-items: center;
     margin-bottom: 2rem;
-    max-width: 700px; /* Limit the width to 800px */
-    width: 100%; /* Ensure it takes up the full width available within the max-width */
+    max-width: 700px; 
+    width: 100%; 
     margin-left: auto;
-    margin-right: auto; /* Center the search form */
-    padding: 0 1rem; /* Optional: Add padding to adjust spacing inside the form */
+    margin-right: auto; 
+    padding: 0 1rem; 
 }
 
 #search-input {
@@ -176,6 +185,7 @@ button[type="submit"] {
     width: 100%;
     margin-left: auto;
     margin-right: 30px;
+    margin-top: 20px;
 }
 
 #small-search-input {
@@ -186,6 +196,11 @@ button[type="submit"] {
     border: 2px solid #ccc;
     border-radius: 0.25rem;
     margin-right: 0.5rem;
+}
+
+#small-search-input:focus {
+    outline: none;
+    border-color: #2C2A7A;
 }
 
 .small-search-form button[type="submit"] {
@@ -201,6 +216,7 @@ button[type="submit"] {
 /* Welcome Section */
 .welcome-container {
     background-color: #3a3a3a;
+    border: 1.5px solid #E5E5E5;
     padding: 1rem;
     margin-bottom: 2rem;
     border-radius: 0.25rem;
@@ -208,6 +224,17 @@ button[type="submit"] {
 
 .welcome-container h2 {
     color: #FFFFFF;
+    text-align: center;
+    background-color: #333030;
+    border-radius: 0.25rem;
+    border: 1.5px solid #E5E5E5;
+    padding: 0.5rem 1rem;
+    margin-top: 0;
+}
+
+.welcome-container p {
+    color: #FFFFFF;
+    text-align: center;
 }
 
 /* Main Content Section */
@@ -222,16 +249,44 @@ button[type="submit"] {
     margin-top: 1rem; 
 }
 
-.featured-article, .news-about-kos {
+.featured-article {
     background-color: #4B2AA3;
     color: #FFFFFF;
     padding: 1rem;
     border-radius: 0.25rem;
+    border: 1.5px solid #2C2A7A;
     width: 48%; 
 }
 
-.featured-article h3, .news-about-kos h3 {
+.news-about-kos {
+    background-color: #2A637A;
+    color: #FFFFFF;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    border: 1.5px solid #1A3840;
+    width: 48%; 
+}
+
+.featured-article h3 {
+    background-color: #2C2A7A;
+    border-radius: 0.25rem;
+    border: 1.5px solid #333030;
+    padding: 0.5rem 1rem;
     margin-top: 0;
+}
+
+.news-about-kos h3 {
+    background-color: #1A3840;
+    border-radius: 0.25rem;
+    border: 1.5px solid #333030;
+    padding: 0.5rem 0.5rem;
+    margin-top: 0;
+}
+
+.encased-h2 {
+    color: #FFFFFF;
+    font-size: 2rem;
+    background-color: #4B2AA3;
 }
 
 .logo-large {
@@ -247,10 +302,11 @@ button[type="submit"] {
 }
 
 .logo-small {
-    max-width: 80px;
+    max-width: 60px;
     vertical-align: middle;
     margin-right: 20px;
     margin-left: 20px;
+    margin-top: 20px;
     cursor: pointer;
 }
 
@@ -263,4 +319,5 @@ button[type="submit"] {
     font-size: 2rem;
     margin: 0;
     padding-right: 20px;
+    margin-top: 20px;
 }
