@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    max-width: auto;
     margin: 0 auto;
     padding: 2rem;
 }
@@ -25,10 +25,16 @@ h1 {
 }
 
 #search-form {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 2rem;
+    max-width: 700px; /* Limit the width to 800px */
+    width: 100%; /* Ensure it takes up the full width available within the max-width */
+    margin-left: auto;
+    margin-right: auto; /* Center the search form */
+    padding: 0 1rem; /* Optional: Add padding to adjust spacing inside the form */
 }
 
 #search-input {
@@ -100,13 +106,18 @@ button[type="submit"] {
 
 /* Suggestions styles */
 .suggestions-container {
-    border: 1px solid #ccc;
+    border: 1px solid #2C2A7A;
     border-radius: 0.25rem;
+    color: #FFFFFF;
     max-height: 200px;
     overflow-y: auto;
-    background-color: #fff;
-    position: absolute; /* Position it directly below the input */
-    z-index: 10; /* Ensure it appears above other elements */
+    background-color: #4B2AA3;
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    box-sizing: border-box;
 }
 
 .suggestion-item {
@@ -115,7 +126,31 @@ button[type="submit"] {
 }
 
 .suggestion-item:hover {
-    background-color: #e0e0e0; /* Highlight on hover */
+    background-color: #2C2A7A;
+}
+
+.small-suggestions-container {
+    border: 1px solid #2C2A7A;
+    border-radius: 0.25rem;
+    color: #FFFFFF;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #4B2AA3;
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    box-sizing: border-box;
+}
+
+.small-suggestion-item {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.small-suggestion-item:hover {
+    background-color: #2C2A7A;
 }
 
 /* Header Section */
@@ -132,19 +167,25 @@ button[type="submit"] {
 }
 
 /* Smaller Search Bar */
-.small-search-form {
+#small-search-form {
+    position: relative;
     display: flex;
+    justify-content: center;
     align-items: center;
+    max-width: 325px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: 30px;
 }
 
-.small-search-form input[type="text"] {
+#small-search-input {
     font-size: 1rem;
     padding: 0.5rem;
     color: #FFFFFF;
     background-color: #4B2AA3;
     border: 2px solid #ccc;
     border-radius: 0.25rem;
-    margin-right: 1rem;
+    margin-right: 0.5rem;
 }
 
 .small-search-form button[type="submit"] {
@@ -176,9 +217,9 @@ button[type="submit"] {
 }
 
 .flex-container {
-    display: flex; /* Enables flexbox layout */
-    justify-content: space-between; /* Ensures items are spaced out */
-    margin-top: 1rem; /* Optional: Add some space above */
+    display: flex; 
+    justify-content: space-between; 
+    margin-top: 1rem; 
 }
 
 .featured-article, .news-about-kos {
@@ -186,7 +227,7 @@ button[type="submit"] {
     color: #FFFFFF;
     padding: 1rem;
     border-radius: 0.25rem;
-    width: 48%; /* Adjust width to fit the container */
+    width: 48%; 
 }
 
 .featured-article h3, .news-about-kos h3 {
@@ -198,9 +239,28 @@ button[type="submit"] {
     max-height: 200px;
     vertical-align: middle;
     margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+.logo-large:hover {
+    content: url('images/halooshidHighlight.png');
 }
 
 .logo-small {
-    max-width: 50px;
+    max-width: 80px;
     vertical-align: middle;
+    margin-right: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.logo-small:hover {
+    content: url('images/halooshidHighlight.png');
+}
+
+.wiki-title {
+    color: #FFFFFF;
+    font-size: 2rem;
+    margin: 0;
+    padding-right: 20px;
 }

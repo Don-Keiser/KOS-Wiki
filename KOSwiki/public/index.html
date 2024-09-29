@@ -11,17 +11,17 @@
     <div class="container">
         <div class="center">
             <h1>KÖS-Wiki</h1>
-            <img src="images/halooshid.png" alt="KÖS-Wiki Logo" class="logo-large"> <!-- Logo Image -->
+            <a href="/mainPage.html">
+                <img src="images/halooshid.png" alt="KÖS-Wiki Logo" class="logo-large">
+            </a>
         </div>
-
+        
         <form id="search-form">
             <input type="text" id="search-input" placeholder="Enter search">
             <button type="submit">Search</button>
+            <div id="suggestions" class="suggestions-container"></div>
         </form>
-
         <div id="search-results"></div>
-        <div id="suggestions" class="suggestions-container"></div> <!-- Suggestions Container -->
-
     </div>
 
     <script src="app.js"></script>

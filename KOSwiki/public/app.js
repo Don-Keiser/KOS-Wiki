@@ -8,8 +8,12 @@ let pages = [];
 // Fetch the list of wiki pages from the server
 async function loadPages() {
     try {
-        const response = await fetch('/api/pages');
+        const response = await fetch('/search');  // Fetching from the correct endpoint
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
         pages = await response.json();
+        console.log('Pages loaded:', pages);  // Log the loaded pages for debugging
     } catch (error) {
         console.error('Failed to load pages:', error);
     }
@@ -20,8 +24,9 @@ loadPages();
 
 function searchLocalWiki(query) {
     if (query.trim() === '') {
-        // If the query is empty, return all pages
-        return pages;
+        // Redirect to the main page if the query is empty
+        window.location.href = '/mainPage.html';  // Adjust the path as needed
+        return [];
     }
     return pages.filter(page => 
         page.title.toLowerCase().includes(query.toLowerCase())
@@ -86,6 +91,12 @@ searchForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const query = searchInput.value.trim();
+
+    if (!query) {
+        // Redirect to the main page if the search input is blank
+        window.location.href = '/mainPage.html';  // Adjust the path as needed
+        return;
+    }
 
     searchResults.innerHTML = "<div class='spinner'>Loading ...</div>";
 

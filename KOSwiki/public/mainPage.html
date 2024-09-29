@@ -8,15 +8,19 @@
 </head>
 <body>
 
-    <div class="container">
-        <div class="header-container">
-            <h1>KÖS-Wiki</h1>
-            <form id="small-search-form" style="display: inline;">
-                <input type="text" id="search-input" placeholder="Search..." />
-                <button type="submit">Search</button>
-            </form>
-        </div>
+    <div class="header-container">
+        <a href="/index.html">
+            <img src="images/halooshid.png" alt="KÖS-Wiki Logo" class="logo-small">
+        </a>
+        <h1 class="wiki-title">KÖS-Wiki</h1>
+        <form id="small-search-form">
+            <input type="text" id="small-search-input" placeholder="Search...">
+            <button type="submit">Search</button>
+            <div id="small-suggestions" class="small-suggestions-container"></div>
+        </form>
+    </div>
 
+    <div class="container">
         <div class="welcome-container">
             <h2>Welcome to the Kui Öösel Saabub Wiki</h2>
             <p id="article-count">[number of pages] articles</p>

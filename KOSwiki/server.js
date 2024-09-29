@@ -10,7 +10,7 @@ app.use(express.static('public'));
 
 // Helper function to get all wiki pages
 function getWikiPages() {
-    const wikiDir = path.join(__dirname, 'public', 'wiki');
+    const wikiDir = path.join(__dirname, 'public', 'wiki'); // Ensure this path is correct
     return fs.readdirSync(wikiDir).filter(file => file.endsWith('.html')).map(file => ({
         title: path.basename(file, '.html'),
         url: `/wiki/${file}`
@@ -27,6 +27,12 @@ app.get('/search', (req, res) => {
     }
 
     res.json(pages);
+});
+
+// API endpoint to get the total number of pages
+app.get('/page-count', (req, res) => {
+    const pages = getWikiPages();
+    res.json({ count: pages.length });
 });
 
 // Start the server
