@@ -15,6 +15,13 @@ function getDisplayNameFromPage(filePath) {
     return match ? match[1] : path.basename(filePath, '.html');  // Fallback to file name if no meta tag
 }
 
+// Helper function to get the article description from a page
+function getArticleDescription(filePath) {
+    const fileContent = fs.readFileSync(filePath, 'utf8');
+    const match = fileContent.match(/<p class="article-description">(.*?)<\/p>/);
+    return match ? match[1] : 'No description available';  // Fallback if no description is found
+}
+
 // Helper function to get all wiki pages
 function getWikiPages() {
     const wikiDir = path.join(__dirname, 'public', 'wiki'); // Ensure this path is correct
@@ -23,6 +30,7 @@ function getWikiPages() {
         .map(file => ({
             title: path.basename(file, '.html'),
             displayName: getDisplayNameFromPage(path.join(wikiDir, file)), // Read the display name from the meta tag
+            description: getArticleDescription(path.join(wikiDir, file)), // Read the article description
             url: `/wiki/${file}`
         }));
 }

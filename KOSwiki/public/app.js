@@ -38,11 +38,13 @@ function displayResults(results) {
 
     results.forEach((result) => {
         const titleLink = `<a href="${result.url}" target="_blank" rel="noopener">${result.displayName}</a>`;
+        const description = result.description ? `<p class="result-description">${result.description}</p>` : '';
 
         const resultItem = document.createElement('div');
         resultItem.className = 'result-item';
         resultItem.innerHTML = `
             <h3 class="result-title">${titleLink}</h3>
+            ${description}
         `;
 
         searchResults.appendChild(resultItem);
