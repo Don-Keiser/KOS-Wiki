@@ -45,7 +45,7 @@ function getSmallSuggestions(query) {
 
     // Filter suggestions based on the input
     return pages.filter(page =>
-        page.title.toLowerCase().includes(query.toLowerCase())
+        page.displayName.toLowerCase().includes(query.toLowerCase())
     ).slice(0, 6); // Limit to the first 6 results
 }
 
@@ -62,7 +62,7 @@ function displaySmallSuggestions(suggestions) {
     suggestions.forEach(suggestion => {
         const suggestionItem = document.createElement('div');
         suggestionItem.className = 'small-suggestion-item';
-        suggestionItem.innerText = suggestion.title;
+        suggestionItem.innerText = suggestion.displayName;
 
         // Add event listener for click
         suggestionItem.addEventListener('click', () => {

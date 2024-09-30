@@ -29,7 +29,7 @@ function searchLocalWiki(query) {
         return [];
     }
     return pages.filter(page => 
-        page.title.toLowerCase().includes(query.toLowerCase())
+        page.displayName.toLowerCase().includes(query.toLowerCase())
     );
 }
 
@@ -37,14 +37,12 @@ function displayResults(results) {
     searchResults.innerHTML = '';
 
     results.forEach((result) => {
-        const titleLink = `<a href="${result.url}" target="_blank" rel="noopener">${result.title}</a>`;
-        const urlLink = `<a href="${result.url}" class="result-link" target="_blank" rel="noopener">${result.url}</a>`;
+        const titleLink = `<a href="${result.url}" target="_blank" rel="noopener">${result.displayName}</a>`;
 
         const resultItem = document.createElement('div');
         resultItem.className = 'result-item';
         resultItem.innerHTML = `
             <h3 class="result-title">${titleLink}</h3>
-            ${urlLink}
         `;
 
         searchResults.appendChild(resultItem);
@@ -55,12 +53,12 @@ function showSuggestions(query) {
     suggestionsContainer.innerHTML = ''; // Clear previous suggestions
 
     if (query.trim() === '') {
-        suggestionsContainer.style.display = 'none'; // Hide suggestions if input is empty
-        return; // Don't show suggestions for empty input
+        suggestionsContainer.style.display = 'none';
+        return;
     }
 
     const suggestions = pages.filter(page =>
-        page.title.toLowerCase().includes(query.toLowerCase())
+        page.displayName.toLowerCase().includes(query.toLowerCase())
     ).slice(0, 6); // Limit to the first 6 results
 
     if (suggestions.length === 0) {
@@ -73,12 +71,12 @@ function showSuggestions(query) {
     suggestions.forEach(suggestion => {
         const suggestionItem = document.createElement('div');
         suggestionItem.className = 'suggestion-item';
-        suggestionItem.innerText = suggestion.title;
+        suggestionItem.innerText = suggestion.displayName;
 
         suggestionItem.addEventListener('click', () => {
-            searchInput.value = suggestion.title; // Set input value to suggestion
+            searchInput.value = suggestion.displayName; // Set input value to suggestion
             suggestionsContainer.innerHTML = ''; // Clear suggestions
-            const results = searchLocalWiki(suggestion.title);
+            const results = searchLocalWiki(suggestion.displayName);
             displayResults(results);
             suggestionsContainer.style.display = 'none'; // Hide suggestions after selection
         });
