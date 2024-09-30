@@ -67,6 +67,8 @@ body {
     margin-top: 10px;
     margin-bottom: 0px;
     font-weight: bold;
+    background-color: #3a3a3a;
+    padding-left: 5px;
     color: #ddd;
 }
 
@@ -75,6 +77,8 @@ body {
     margin-top: 10px;
     margin-bottom: 2px;
     font-weight: bold;
+    background-color: #3a3a3a;
+    padding-left: 5px;
     color: #ddd;
 }
 
@@ -82,6 +86,7 @@ body {
     font-size: 1rem;
     margin-bottom: 2px;
     font-weight: bold;
+    background-color: #3a3a3a;
     color: #ddd;
 }
 
@@ -109,10 +114,13 @@ body {
 
 .infobox-title {
     font-size: 1.3rem;
-    font-weight: bold;
+    font-weight: bolder;
     text-align: center;
     margin-bottom: 0;
     margin-top: 0;
+    background-color: #1A3840;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .infobox-subtitle {
@@ -122,6 +130,13 @@ body {
     font-style: italic;
     margin-top: 0;
     margin-bottom: 0.5rem;
+}
+
+.infobox-alt-title {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .normal-text {
@@ -139,6 +154,22 @@ body {
     text-align: center;
 }
 
+.infobox img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.infobox-flag {
+    max-width: 150px;
+    max-height: 100px;
+}
+
+.infobox-map {
+    max-width: 280px;
+    max-height: 280px;
+}
+
 /* Table of Contents styling */
 .toc {
     color: #ddd;
@@ -148,8 +179,10 @@ body {
     border-right: 1px solid #ddd;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
     position: fixed;
-    top: 20px;
+    top: 90px;
     left: 20px;
+    z-index: 1000;
+    background-color: #333030;
 }
 
 .toc h3 {
@@ -227,3 +260,133 @@ details[open] summary::before {
         padding-left: 0;
     }
 }
+
+/*Wiki logo*/
+.logo-small {
+    max-width: 60px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.logo-small:hover {
+    content: url('/images/halooshidHighlight.png');
+}
+
+/* Smaller Search Bar */
+#small-search-form {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 325px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: 30px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+#small-search-input {
+    font-size: 1rem;
+    padding: 0.5rem;
+    color: #FFFFFF;
+    background-color: #4B2AA3;
+    border: 2px solid #ccc;
+    border-radius: 0.25rem;
+    margin-right: 0.5rem;
+}
+
+#small-search-input:focus {
+    outline: none;
+    border-color: #2C2A7A;
+}
+
+.small-search-form button[type="submit"] {
+    font-size: 1rem;
+    padding: 0.5rem;
+    background-color: #4B2AA3;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+/* Suggestions styles */
+.suggestions-container {
+    border: 1px solid #2C2A7A;
+    border-radius: 0.25rem;
+    color: #FFFFFF;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #4B2AA3;
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    box-sizing: border-box;
+}
+
+.suggestion-item {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background-color: #2C2A7A;
+}
+
+.small-suggestions-container {
+    border: 1px solid #2C2A7A;
+    border-radius: 0.25rem;
+    color: #FFFFFF;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #4B2AA3;
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    box-sizing: border-box;
+}
+
+.small-suggestion-item {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.small-suggestion-item:hover {
+    background-color: #2C2A7A;
+}
+
+/* Header Section */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.wiki-title {
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    margin: 0;
+    flex-grow: 1; /* Take remaining space */
+}
+
+button[type="submit"] {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    background-color: #4B2AA3;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+    button[type="submit"]:hover {
+        background-color: #2C2A7A;
+    }

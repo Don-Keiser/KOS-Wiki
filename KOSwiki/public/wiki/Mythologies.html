@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="iso-8859-15">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mytologies</title>
+    <link rel="stylesheet" href="/article.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="header-container">
+        <a href="/index.html">
+            <img src="/images/halooshid.png" alt="KÖS-Wiki Logo" class="logo-small">
+        </a>
+        <h1 class="wiki-title">KÖS-Wiki</h1>
+        <form id="small-search-form">
+            <input type="text" id="small-search-input" placeholder="Search...">
+            <button type="submit">Search</button>
+            <div id="small-suggestions" class="small-suggestions-container"></div>
+        </form>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="toc">
+        <h3>Contents</h3>
+        <hr class="divider">
+        <ul>
+            <li>
+                <!-- Expandable Section -->
+                <details>
+                    <summary>Europe</summary>
+                    <ul>
+                        <li><a href="#western-europe">Western Europe</a></li>
+                        <ul>
+                            <li><a href="#france">France</a></li>
+                        </ul>
+                    </ul>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary>Asia</summary>
+                    <ul>
+                        <li><a href="#south-east-asia">South-East Asia</a></li>
+                        <ul>
+                            <li><a href="#ooselids">Ööselid States</a></li>
+                        </ul>
+                    </ul>
+                </details>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Common container for header and article -->
+    <div class="article-wrapper">
+        <!-- Header container -->
+        <div class="article-header">
+            <h1 class="article-title">Mythologies</h1>
+        </div>
+
+        <hr class="divider">
+
+        <!-- Article container -->
+        <div class="article-container">
+            <!-- Main content -->
+            <div class="main-content">
+                <p class="article-description">Mythologies of the world:</p>
+                
+                <!-- Europe -->
+                <h2 id="europe" class="section-title">Europe</h2>
+                <hr class="divider">
+
+                <h3 id="western-europe" class="subsection-title">Western Europe</h3>
+
+                <h4 id="france" class="subsubsection-title">France</h4>
+                <p class="section-content">...</p>
+
+                <!-- Asia -->
+                <h2 id="asia" class="section-title">Asia</h2>
+                <hr class="divider">
+                <p class="section-content">...</p>
+
+                <h3 id="south-east-asia" class="subsection-title">South-East Asia</h3>
+                <a href="/wiki/Ooselid_Mythology.html">
+                    <h4 class="subsubsection-title">Ööselid Mythology</h4>
+                </a>
+                <p class="section-content">...</p>
+
+            </div>
+        </div>
+    </div>
+    <script src="/article.js"></script>
+</body>
+</html>
