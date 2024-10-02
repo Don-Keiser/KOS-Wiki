@@ -170,6 +170,51 @@ body {
     max-height: 280px;
 }
 
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    unicode-bidi: isolate;
+    border-color: inherit;
+}
+
+.infobox table {
+    display: table;
+    box-sizing: border-box;
+    border-collapse: separate;
+    text-indent: initial;
+}
+
+.table-infobox {
+    margin: 0.5em 0 0.5em 1em;
+    float: right;
+    clear: right;
+    width: 100%;
+}
+
+.infobox tr {
+    display: table-row;
+    vertical-align: inherit;
+}
+
+.infobox-label {
+    text-align: left;
+    vertical-align: top;
+}
+
+.infobox-data {
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    display: table-cell;
+    font-weight: bolder;
+}
+
+td {
+    display: table-cell;
+}
+
 /* Table of Contents styling */
 .toc {
     color: #ddd;
